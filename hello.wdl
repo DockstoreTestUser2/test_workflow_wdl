@@ -1,3 +1,4 @@
+import "helper.wdl" as helperfile
 task hello {
   String name
 
@@ -15,4 +16,5 @@ task hello {
 
 workflow test {
   call hello
+  call helperfile.helper
 }
